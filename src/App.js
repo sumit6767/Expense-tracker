@@ -6,9 +6,8 @@ import ExpenseItem from './components/ExpenseItem'
 function App(props){
   return(
     <div>
-      <ExpenseItem expense="Food" amount ="10"></ExpenseItem>
-      <ExpenseItem expense="Petrol" amount="100"></ExpenseItem>
-      <ExpenseItem expense="Movies" amount="200"></ExpenseItem>
+      <h1>Expense Details</h1>
+      <ExpenseItem></ExpenseItem>
     </div>
   )
 }
