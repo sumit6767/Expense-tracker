@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import ReactDOM from 'react-dom/client'
-import ExpenseItem from './components/ExpenseItem'
+import ExpenseItem from './components/expenses/ExpenseItem'
 
 function App(props){
 
