@@ -5,9 +5,9 @@ import ExpenseItem from './components/ExpenseItem'
 
 function App(props){
 
-  const expenses = [{date  : new Date().toISOString(), expenseDetail : "food" ,amount : "10" ,LocationOfExpenditure : "kalyan"},
-  {date  : new Date().toISOString(), expenseDetail : "Petrol" ,amount : "100" ,LocationOfExpenditure : "Kurla"},
-  {date  : new Date().toISOString(), expenseDetail : "Movies" ,amount : "200" ,LocationOfExpenditure : "Thane"}]
+  const expenses = [{date  : new Date(), expenseDetail : "food" ,amount : "10" ,LocationOfExpenditure : "kalyan"},
+  {date  : new Date(), expenseDetail : "Petrol" ,amount : "100" ,LocationOfExpenditure : "Kurla"},
+  {date  : new Date(), expenseDetail : "Movies" ,amount : "200" ,LocationOfExpenditure : "Thane"}]
   return(
     <div>
       <h1>Expense Details</h1>
