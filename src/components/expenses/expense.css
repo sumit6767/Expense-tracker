@@ -7,6 +7,23 @@
     box-shadow: 2px 2px 3px black;
     align-items: center;
     margin-right:10rem;
+    width:50%;
+}
+.btn{
+    transition: all 0.4s ease-in-out;
+    padding: 0.7vw;
+    outline: none;
+    border:2px solid red;
+    border-radius: 1vw;
+    color: red;
+    font-weight: bolder;
+    background-color: white;
+    font-size: 1vw;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: red;
+    color:white
 }
 .expense{
     display: flex;
@@ -23,7 +40,12 @@
 .expenseDate{
     border:1px solid black;
     padding: 1rem;
-    background-color: white;
     font-weight: bolder;
-    border-radius:1rem
+    border-radius:1rem;
+    background: black;
+    color: white;
+    box-shadow: 2px 2px 10px white;
+}
+.day{
+    font-size:2rem
 }

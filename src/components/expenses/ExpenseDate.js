@@ -6,7 +6,7 @@ export default function ExpenseDate(props){
     return(
         <div className="expenseDate">
             <div>{month}</div>
-            <div>{day}</div>
+            <div className="day">{day}</div>
             <div>{year}</div>
         </div>
     )
