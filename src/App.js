@@ -10,7 +10,7 @@ function App(props){
   {date  : new Date(), expenseDetail : "Movies" ,amount : "200" ,LocationOfExpenditure : "Thane"}]
 
   return(
-    <div style={{backgroundColor:"lightblue"}}>
+    <div>
       <NewExpense />
       <h1 style={{textAlign:"center"}}>Expense Details</h1>
       {
