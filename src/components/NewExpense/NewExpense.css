@@ -1,0 +1,12 @@
+.expense-class{
+    margin:0;
+    padding: 0;;
+    padding:1%;
+    margin: 1% 0%;
+    background-image:linear-gradient(rgba(247, 202, 91, 0.834) 30%,rgb(253, 252, 193) 70%);
+    border-radius:2vw ;
+    border:5px solid red;
+    float: left;
+    width:90%;
+    transition: all 0.3s ease-in;
+}

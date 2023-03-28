@@ -1,0 +1,30 @@
+
+.newexpense-control{
+    float:left;
+    padding: 1vw;
+    width:45%
+}
+.newexpense-control input{
+    width:100%;
+    padding: 2%;
+    margin-top:2%;
+    outline:none;
+    border:none;
+    font-size:1vw;
+    border-radius: 0.3rem;
+}
+.submit{
+    float: left;
+    width:100%;
+    text-align: center;
+}
+.submit button{
+    border:none;
+    padding: 1% 2%;
+    font-weight: bolder;;
+    font-size:1.1vw;
+    background-color: red;
+    border-radius:5px;
+    color:white;
+    cursor:pointer
+}

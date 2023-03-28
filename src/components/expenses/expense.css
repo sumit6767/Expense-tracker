@@ -1,13 +1,13 @@
 .expense_description{
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1.5vw;
     background: antiquewhite;
     border-radius: 2rem;
     box-shadow: 2px 2px 3px black;
     align-items: center;
-    margin-right:10rem;
-    width:50%;
+    margin-right:10vw;
+    width:90%
 }
 .btn{
     transition: all 0.4s ease-in-out;
@@ -34,12 +34,12 @@
 .amount{
     font-weight: bolder;
     color:red;
-    font-size: 1.5rem;
+    font-size: 1.5vw;
 }
 
 .expenseDate{
     border:1px solid black;
-    padding: 1rem;
+    padding: 1vw;
     font-weight: bolder;
     border-radius:1rem;
     background: black;

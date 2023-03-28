@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-import ReactDOM from 'react-dom/client'
 import ExpenseItem from './components/expenses/ExpenseItem'
-import React,{useRef,useEffect, useState} from 'react'
+import React,{useRef,useEffect, useState} from 'react';
+import NewExpense from './components/NewExpense/NewExpense';
 
 function App(props){
   const ref = useRef(null); 
@@ -14,7 +13,8 @@ function App(props){
 
   return(
     <div>
-      <h1>Expense Details</h1>
+      <NewExpense />
+      <h1 style={{textAlign:"center"}}>Expense Details</h1>
       {
       expenses.map((expense,nkey)=>{
         return <ExpenseItem key = {nkey} id={nkey} date = {expense.date} expenseDetail = {expense.expenseDetail} amount = {expense.amount} LocationOfExpenditure = {expense.LocationOfExpenditure}></ExpenseItem>
