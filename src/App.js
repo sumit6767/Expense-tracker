@@ -9,10 +9,8 @@ function App(props){
   {date  : new Date(), expenseDetail : "Petrol" ,amount : "100" ,LocationOfExpenditure : "Kurla"},
   {date  : new Date(), expenseDetail : "Movies" ,amount : "200" ,LocationOfExpenditure : "Thane"}]
 
-  const [value,setValue] = useState("sumit ..");
-
   return(
-    <div>
+    <div style={{backgroundColor:"lightblue"}}>
       <NewExpense />
       <h1 style={{textAlign:"center"}}>Expense Details</h1>
       {

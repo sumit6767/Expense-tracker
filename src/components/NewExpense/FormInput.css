@@ -26,5 +26,11 @@
     background-color: red;
     border-radius:5px;
     color:white;
-    cursor:pointer
+    cursor:pointer;
+    transition: 0.2s ease-in-out;
+}
+button:hover{
+    background-color: white;
+    border:1px solid red;
+    color:red
 }

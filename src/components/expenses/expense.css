@@ -44,7 +44,8 @@
     border-radius:1rem;
     background: black;
     color: white;
-    box-shadow: 2px 2px 10px white;
+    box-shadow: 5px 5px 20px white;
+    text-shadow: 1px 1px 4px white;
 }
 .day{
     font-size:2rem
