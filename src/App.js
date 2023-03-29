@@ -5,17 +5,30 @@ import NewExpense from './components/NewExpense/NewExpense';
 
 function App(props){
   const ref = useRef(null); 
-  const expenses = [{date  : new Date(), expenseDetail : "food" ,amount : "10" ,LocationOfExpenditure : "kalyan"},
-  {date  : new Date(), expenseDetail : "Petrol" ,amount : "100" ,LocationOfExpenditure : "Kurla"},
-  {date  : new Date(), expenseDetail : "Movies" ,amount : "200" ,LocationOfExpenditure : "Thane"}]
+  const expenseData = []
+
+  const [expenses,setExpense] = useState([...expenseData]);
+
+  const addExpenseHandler  = (expenseData)=>{
+    expenseData = {
+      date : expenseData.enteredDate,
+      expenseDetail : expenseData.enteredTitle,
+      amount : expenseData.enteredAmount,
+      id : expenseData.id
+    }
+    setExpense((prevState)=>{
+      prevState.push(expenseData)
+      return [...prevState]
+    })
+  }
 
   return(
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense = {addExpenseHandler} />
       <h1 style={{textAlign:"center"}}>Expense Details</h1>
       {
       expenses.map((expense,nkey)=>{
-        return <ExpenseItem key = {nkey} id={nkey} date = {expense.date} expenseDetail = {expense.expenseDetail} amount = {expense.amount} LocationOfExpenditure = {expense.LocationOfExpenditure}></ExpenseItem>
+        return <ExpenseItem key = {nkey} id={nkey} date = {new Date(expense.date)} expenseDetail = {expense.expenseDetail} amount = {expense.amount} ></ExpenseItem>
       })
       }
     </div>

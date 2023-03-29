@@ -1,7 +1,8 @@
 import React,{useState}  from "react";
 import './FormInput.css';
+import Pop from './Pop';
 
-const FormInput = ()=>{
+const FormInput = (props)=>{
     const [userInput,setUserInput] = useState({
         enteredTitle:"",
         enteredDate:"",
@@ -9,10 +10,14 @@ const FormInput = ()=>{
     })
 
     function submitHandler(e){
-        e.preventDefault()
-        console.log({...userInput,enteredDate:new Date(userInput.enteredDate)})
+        e.preventDefault();
+        props.onSaveExpense({...userInput,id:""+Math.floor(Math.random())});
+        setUserInput({
+            enteredTitle:"",
+            enteredDate:"",
+            enteredAmount:"",
+        })
     }
-
     return(
     <>
     <form onSubmit={submitHandler}>
@@ -30,20 +35,8 @@ const FormInput = ()=>{
                 <input type="date" id="date" min="2019-01-01" max="2022-12-31" value={userInput.enteredDate} onChange={(e)=>{setUserInput((prevstate)=>{return {...prevstate,enteredDate:e.target.value}})}}/>
             </div>
         </div>
-        <div className="submit">
-            <button>Submit</button>
-        </div>
-        <div className="pop">
-        <div>
-           Title : {userInput.enteredTitle}
-        </div>
-        <div>
-            Amount : {userInput.enteredAmount}
-        </div>
-        <div>
-            Date : {userInput.enteredDate}
-        </div>
-    </div>
+        <button className="submit">Submit</button>
+    <Pop userInput = {userInput}/>
     </form>
     </>
     )
