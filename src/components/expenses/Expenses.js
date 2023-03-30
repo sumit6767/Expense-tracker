@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import ExpenseFilter from './ExpenseFilter';
 import ExpenseItem from "./ExpenseItem";
+import './Expenses.css';
 
 function Expenses(props){
     const [selectedYear,setSelectedYear] = useState('2020');
@@ -13,8 +14,7 @@ function Expenses(props){
         <>
       <ExpenseFilter selectedYear={selectedYear} selectionHandler={selectionfilterHandler}/>
       {
-       
-      expenses.map((expense,nkey)=>{
+        expenses.length===0 ? <p className="no-item">No items found</p> : expenses.map((expense,nkey)=>{
         return <ExpenseItem key = {expense.id}  date = {new Date(expense.enteredDate)} expenseDetail = {expense.enteredTitle} amount = {expense.enteredAmount} ></ExpenseItem>
       })
       }

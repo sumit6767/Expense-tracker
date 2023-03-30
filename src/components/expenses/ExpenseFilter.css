@@ -13,3 +13,8 @@
     outline:none;
     font-weight: 600;
 }
+.filter:hover+.no-item{
+    opacity: 1;
+    right:30%;
+    transform: translate(-50%);
+}

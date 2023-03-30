@@ -1,0 +1,16 @@
+.no-item{
+    position: absolute;;
+    width:25%;
+    height: 75px;
+    right: 0%;
+    background-color: white;
+    border: 3px dashed black;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size:1.2rem;
+    transition: 0.2s all ease-out;
+    opacity: 0;
+}
