@@ -31,10 +31,26 @@
     cursor:pointer;
     transition: 0.2s ease-in-out;
 }
-.submit:hover{
+.submit:hover,.cancel:hover{
     background-color: white;
     border:1px solid red;
     color:red
+}
+.cancel{
+    position: relative;
+    top:53px;
+    right:14%;
+    text-align: center;
+    border:none;
+    padding: 1% 2%;
+    font-weight: bolder;;
+    font-size:1.1vw;
+    background-color: red;
+    border-radius:5px;
+    color:white;
+    cursor:pointer;
+    transition: 0.2s ease-in-out;
+    margin-left:1%
 }
 .pop{
     width:15%;

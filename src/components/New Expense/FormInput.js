@@ -11,12 +11,15 @@ const FormInput = (props)=>{
 
     function submitHandler(e){
         e.preventDefault();
-        props.onSaveExpense({...userInput,id:""+Math.random()});
+        props.onSaveExpense({...userInput,id:""+Math.random()},"Add");
         setUserInput({
             enteredTitle:"",
             enteredDate:"",
             enteredAmount:"",
         })
+    }
+    const cancelHandler = ()=>{
+        props.onAdd("Add")
     }
     return(
     <>
@@ -38,6 +41,7 @@ const FormInput = (props)=>{
         <button className="submit">Submit</button>
         <Pop userInput = {userInput}/>
     </form>
+    <button className="cancel" onClick={cancelHandler}>Cancel</button>
     </>
     )
 }
