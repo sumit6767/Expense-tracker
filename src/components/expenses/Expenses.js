@@ -14,7 +14,16 @@ function Expenses(props){
         <>
       <ExpenseFilter selectedYear={selectedYear} selectionHandler={selectionfilterHandler}/>
       {
-        expenses.length===0 ? <p className="no-item">No items found</p> : expenses.map((expense,nkey)=>{
+        expenses.length===0 ? <p className="no-item">NO items present</p> : 
+        expenses.length===1 ? 
+        <>
+        <p className="no-item">Only one expense here.Please Add more...</p>
+        {
+        expenses.map((expense,nkey)=>{
+          return <ExpenseItem key = {expense.id}  date = {new Date(expense.enteredDate)} expenseDetail = {expense.enteredTitle} amount = {expense.enteredAmount} />})
+        }
+        </>:
+        expenses.map((expense,nkey)=>{
         return <ExpenseItem key = {expense.id}  date = {new Date(expense.enteredDate)} expenseDetail = {expense.enteredTitle} amount = {expense.enteredAmount} ></ExpenseItem>
       })
       }
