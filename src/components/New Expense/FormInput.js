@@ -11,7 +11,7 @@ const FormInput = (props)=>{
 
     function submitHandler(e){
         e.preventDefault();
-        props.onSaveExpense({...userInput,id:""+Math.floor(Math.random())});
+        props.onSaveExpense({...userInput,id:""+Math.random()});
         setUserInput({
             enteredTitle:"",
             enteredDate:"",
@@ -36,7 +36,7 @@ const FormInput = (props)=>{
             </div>
         </div>
         <button className="submit">Submit</button>
-    <Pop userInput = {userInput}/>
+        <Pop userInput = {userInput}/>
     </form>
     </>
     )

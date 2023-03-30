@@ -1,23 +1,13 @@
 import './App.css';
-import ExpenseItem from './components/expenses/ExpenseItem'
-import React,{useRef,useEffect, useState} from 'react';
-import NewExpense from './components/NewExpense/NewExpense';
+import React,{ useState} from 'react';
+import NewExpense from './components/New Expense/NewExpense';
+import Expenses from './components/expenses/Expenses';
 
 function App(props){
-  const ref = useRef(null); 
-  const expenseData = []
-
-  const [expenses,setExpense] = useState([...expenseData]);
-
+  const [expenses,setExpense] = useState([]);
   const addExpenseHandler  = (expenseData)=>{
-    expenseData = {
-      date : expenseData.enteredDate,
-      expenseDetail : expenseData.enteredTitle,
-      amount : expenseData.enteredAmount,
-      id : expenseData.id
-    }
     setExpense((prevState)=>{
-      prevState.push(expenseData)
+      prevState.unshift(expenseData)
       return [...prevState]
     })
   }
@@ -26,20 +16,11 @@ function App(props){
     <div>
       <NewExpense onAddExpense = {addExpenseHandler} />
       <h1 style={{textAlign:"center"}}>Expense Details</h1>
-      {
-      expenses.map((expense,nkey)=>{
-        return <ExpenseItem key = {nkey} id={nkey} date = {new Date(expense.date)} expenseDetail = {expense.expenseDetail} amount = {expense.amount} ></ExpenseItem>
-      })
-      }
+      <div style={{backgroundColor:'rgba(0, 0, 0, 0.36)',borderRadius:'1rem',width:'93%'}}>
+      <Expenses expenseData = {expenses} />
+      </div>
     </div>
   )
 }
 
-
-
-function Call(){
-  return(
-    <h1>Hi</h1>
-  )
-}
 export default App;

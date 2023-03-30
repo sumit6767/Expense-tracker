@@ -1,0 +1,15 @@
+.filter{
+    padding:1rem;
+    color:black;
+    font-weight: bolder;
+    font-size:1.3rem
+}
+.filter select{
+    position: relative;
+    left:87%;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    outline:none;
+    font-weight: 600;
+}
