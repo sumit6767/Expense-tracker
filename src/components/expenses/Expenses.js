@@ -2,10 +2,10 @@ import React,{useState} from "react";
 import ExpenseFilter from './ExpenseFilter';
 import ExpenseItem from "./ExpenseItem";
 import './Expenses.css';
+import ExpenseChart from "./ExpenseChart";
 
 function Expenses(props){
     const [selectedYear,setSelectedYear] = useState('2020');
-    console.log(props.expenseData)
     const expenses = props.expenseData.filter((expense)=>expense.enteredDate.slice(0,4)===selectedYear)
     function selectionfilterHandler(year){
         setSelectedYear(year)
@@ -13,6 +13,7 @@ function Expenses(props){
     return(
         <>
       <ExpenseFilter selectedYear={selectedYear} selectionHandler={selectionfilterHandler}/>
+      <ExpenseChart expenses = {expenses}/>
       {
         expenses.length===0 ? <p className="no-item">NO items present</p> : 
         expenses.length===1 ? 
