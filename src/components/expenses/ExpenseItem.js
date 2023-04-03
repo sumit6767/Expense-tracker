@@ -8,7 +8,7 @@ export default function ExpenseItem(props){
     return(
         <Card className="expense_description" id={props.id}>
             <ExpenseDate date={props.date}/>
-            <ExpenseDetails amount={props.amount} LocationOfExpenditure={props.LocationOfExpenditure} expenseDetail = {props.expenseDetail}></ExpenseDetails>
+            <ExpenseDetails onUpdate={props.onUpdate} expenses = {props.expenses} id={props.id} amount={props.amount} LocationOfExpenditure={props.LocationOfExpenditure} expenseDetail = {props.expenseDetail}></ExpenseDetails>
         </Card>
     )
 }

@@ -11,13 +11,15 @@ function App(props){
       return [...prevState]
     })
   }
-
+  const updateExpenseHandler = (expenseData)=>{
+    setExpense(expenseData);
+  }
   return(
     <div>
       <NewExpense onAddExpense = {addExpenseHandler} />
       <h1 style={{textAlign:"center"}}>Expense Details</h1>
       <div style={{backgroundColor:'rgba(0, 0, 0, 0.36)',borderRadius:'1rem',width:'93%'}}>
-      <Expenses expenseData = {expenses} />
+      <Expenses expenseData = {expenses} onUpdate={updateExpenseHandler}/>
       </div>
     </div>
   )

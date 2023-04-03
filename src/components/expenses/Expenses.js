@@ -21,11 +21,11 @@ function Expenses(props){
         <p className="no-item">Only one expense here.Please Add more...</p>
         {
         expenses.map((expense,nkey)=>{
-          return <ExpenseItem key = {expense.id}  date = {new Date(expense.enteredDate)} expenseDetail = {expense.enteredTitle} amount = {expense.enteredAmount} />})
+          return <ExpenseItem onUpdate={props.onUpdate} expenses = {props.expenseData} id={expense.id} key = {expense.id}  date = {new Date(expense.enteredDate)} expenseDetail = {expense.enteredTitle} amount = {expense.enteredAmount} />})
         }
         </>:
         expenses.map((expense,nkey)=>{
-        return <ExpenseItem key = {expense.id}  date = {new Date(expense.enteredDate)} expenseDetail = {expense.enteredTitle} amount = {expense.enteredAmount} ></ExpenseItem>
+        return <ExpenseItem onUpdate={props.onUpdate} expenses={props.expenseData} key = {expense.id} id={expense.id} date = {new Date(expense.enteredDate)} expenseDetail = {expense.enteredTitle} amount = {expense.enteredAmount} ></ExpenseItem>
       })
       }
       </>
